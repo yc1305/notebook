@@ -1,0 +1,94 @@
+html body {
+  margin: 0;
+}
+.bar {
+  grid-area: NVbar;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+}
+.bar a {
+  color: white;
+  font-size: 50px;
+}
+.bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* background-color: white; */
+}
+
+.bar li {
+  display: inline;
+  /* background-color: white; */
+  /* color: brown; */
+}
+
+.item1 {
+  grid-area: header;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: yellow; */
+  background-image: url(123.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin: 0;
+  padding: 0; */
+}
+.adMask {
+  /* position: absolute; */
+  /* text-align: center; */
+  background-color: rgba(0, 0, 0, 0.7); /*黑色半透明遮罩 */
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.item4 {
+  grid-area: menu;
+  justify-content: center;
+  align-items: center;
+  background-color: darkgreen;
+  /* height: 40vh; */
+  font-size: 100px;
+}
+.item3 {
+  grid-area: main;
+  background-color: saddlebrown;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+.item5 {
+  grid-area: footer;
+  background-color: fuchsia;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "NVbar NVbar NVbar NVbar NVbar NVbar"
+    "header header header header header header"
+    "menu menu main main main main "
+    "footer footer footer footer footer footer";
+  gap: 10px;
+  background-color: peru;
+  padding: 100px;
+}
+
+.grid-container > div,
+.grid-container > div > div {
+  display: flex;
+  align-items: center; /*上下置中*/
+  justify-content: center; /*左右置中*/
+  /* font-size: 30px; */
+}
